@@ -1,5 +1,6 @@
 import { LocalDataSource } from "./data/localDataSource";
 import { DomDisplay } from "./domDisplay";
+import { HtmlDisplay } from "./htmlDisplay";
 import "bootstrap/dist/css/bootstrap.css";
 
 // // 非同步的產品資料展示函式 (傳回一個很長的字串)
@@ -35,7 +36,8 @@ let ds = new LocalDataSource();  // 取得 data store
 
 async function displayData(): Promise<HTMLElement> {
   // 建立一個新的 DomDisplay物件
-  let display = new DomDisplay();
+  // let display = new DomDisplay();
+  let display = new HtmlDisplay();
   // 設定 DomDisplay 物件的 props 屬性，放入 data store 的產品及訂單物件
   display.props = {
     products: await ds.getProducts("name"),

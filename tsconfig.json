@@ -3,6 +3,8 @@
     "target": "es2020",
     "outDir": "./dist",
     "rootDir": "./src",
-    "module": "commonJs"
+    "module": "commonJs",
+    "jsx": "react",
+    "jsxFactory": "createElement"
   }
 }

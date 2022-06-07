@@ -5,11 +5,11 @@ module.exports = {
     filename: "bundle.js"
   },
   resolve: {
-    extensions: [".ts", ".js"]
+    extensions: [".tsx", ".ts", ".js", ".css"]
   },
   module: {
     rules: [{
-        test: /\.ts/,
+        test: /\.tsx?$/,
         use: "ts-loader",
         exclude: /node_modules/
       },
