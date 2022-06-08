@@ -40,8 +40,9 @@ async function displayData(): Promise<HTMLElement> {
   let display = new HtmlDisplay();
   // 設定 DomDisplay 物件的 props 屬性，放入 data store 的產品及訂單物件
   display.props = {
-    products: await ds.getProducts("name"),
-    order: ds.order
+    // products: await ds.getProducts("name"),
+    // order: ds.order
+    dataSource: ds
   };
   // 傳回 DomDisplay 物件
   return display.getContent();

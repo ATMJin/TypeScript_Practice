@@ -16,7 +16,7 @@ export class CategoryList {
   getCategoryButton(cat?: string): HTMLElement {
     let selected = this.props.selectedCategory === undefined ?
       "All" : this.props.selectedCategory;
-    let btnClass = selected === cat ? "btn-primart" : "btn-secondary";
+    let btnClass = selected === cat ? "btn-primary" : "btn-secondary";
 
     return <button className={`btn ${btnClass}`} onclick={() => this.props.callback(cat)}>{cat}</button>;
   }
