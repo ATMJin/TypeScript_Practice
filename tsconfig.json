@@ -4,6 +4,7 @@
     "outDir": "./dist",
     "rootDir": "./src",
     "module": "commonJs",
+    "moduleResolution": "node",
     "jsx": "react",
     "jsxFactory": "createElement"
   }

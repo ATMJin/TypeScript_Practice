@@ -1,4 +1,5 @@
 import { LocalDataSource } from "./data/localDataSource";
+import { RemoteDataSource } from "./data/remoteDataSource";
 import { DomDisplay } from "./domDisplay";
 import { HtmlDisplay } from "./htmlDisplay";
 import "bootstrap/dist/css/bootstrap.css";
@@ -32,7 +33,8 @@ import "bootstrap/dist/css/bootstrap.css";
 // displayData().then(res => console.log(res));
 
 
-let ds = new LocalDataSource();  // 取得 data store
+// let ds = new LocalDataSource();  // 取得 data store
+let ds = new RemoteDataSource();  // 取得 data store
 
 async function displayData(): Promise<HTMLElement> {
   // 建立一個新的 DomDisplay物件
