@@ -7,6 +7,7 @@
     "moduleResolution": "node",
     "jsx": "react",
     "jsxFactory": "createElement",
-    "experimentalDecorators": true
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
   }
 }
