@@ -13,7 +13,7 @@ export class Header {
     // 顯示購物車摘要及結帳紐
     return <div className="p-1 bg-secondary text-white text-end">
       {count === 0 ?
-        "(No Selection" : `${count} product(s), $${this.props.order.total.toFixed(2)}`}
+        "(No Selection)" : `${count} product(s), $${this.props.order.total.toFixed(2)}`}
       <button className="btn btn-primary m-1" onclick={this.props.submitCallback}>Submit Order</button>
     </div>;
   }
