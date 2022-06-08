@@ -1,4 +1,5 @@
 import { Product, Order } from './entities';
+import { minimumValue } from "../decorators";
 
 export type ProductProp = keyof Product;
 
@@ -26,8 +27,11 @@ export abstract class AbstractDataSource {
       this._categeories.add(p.category);
     });
   }
+
   // 傳回產品列表 (呼叫 selectProducts(), 根據產品id和指定分類排序)
-  async getProducts(sortProp: ProductProp = "id", category?: string): Promise<Product[]> {
+  @minimumValue("price", 30)  // 產品價格最低必為$30
+  async getProducts(sortProp: ProductProp = "id"
+    , category?: string): Promise<Product[]> {
     await this.loading;
     return this.selectProducts(this._products, sortProp, category);
   }
