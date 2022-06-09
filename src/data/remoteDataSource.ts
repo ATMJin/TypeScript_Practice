@@ -3,12 +3,14 @@ import { Product, Order } from "./entities";
 import Axios from 'axios';
 
 // 網路服務伺服器資訊
-const protocol = "http";
-const hostname = "localhost";
-const port = 4600;
+// const protocol = "http";
+// const hostname = "localhost";
+// const port = 4600;
 const urls = {
-  products: `${protocol}://${hostname}:${port}/products`,
-  orders: `${protocol}://${hostname}:${port}/orders`,
+  // products: `${protocol}://${hostname}:${port}/products`,
+  // orders: `${protocol}://${hostname}:${port}/orders`,
+  products: "/api/products",
+  orders: "/api/orders",
 };
 
 // 繼承AbstractDataSource類別並實作抽象方法
